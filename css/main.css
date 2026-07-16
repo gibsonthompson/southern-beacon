@@ -244,10 +244,11 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
 @media(max-width:540px){footer .cols{grid-template-columns:1fr}}
 
 /* mobile dock */
-.dock{display:none;position:fixed;left:0;right:0;bottom:0;z-index:120;background:var(--darker);padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:2px solid var(--gold)}
+.dock{display:none;position:fixed;left:0;right:0;bottom:0;z-index:120;background:var(--darker);padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:2px solid var(--gold);transform:translateY(110%);transition:transform .28s ease}
+.dock.show{transform:translateY(0)}
 .dock .in{display:grid;grid-template-columns:1.2fr 1fr;gap:10px}
 .dock .btn{padding:13px 10px;font-size:14px}
-@media(max-width:760px){.dock{display:block}body{padding-bottom:76px}}
+@media(max-width:760px){.dock{display:block}}
 
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
@@ -406,3 +407,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
 @media(hover:none){
   nav a,.faq summary,.city-grid span,.svc,.btn{touch-action:manipulation}
 }
+
+/* trust band icon badges (replaces dashed placeholders) */
+.band .tk{width:44px;height:44px;flex-shrink:0;border-radius:8px;background:rgba(199,161,100,.16);border:1px solid rgba(199,161,100,.4);display:flex;align-items:center;justify-content:center}
+.band .tk svg{width:22px;height:22px;stroke:var(--gold)}
