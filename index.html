@@ -50,13 +50,13 @@
 
 <style>
 /* =====================================================
-   SOUTHERN BEACON ENVIRONMENTAL — v4 commercial build
+   SOUTHERN BEACON ENVIRONMENTAL · v4 commercial build
    navy #1F4461 / deep #132C42 / gold #E8A33D / white
    Archivo 800-900 display · Public Sans body
    ===================================================== */
 :root{
-  --navy:#1F4461;--deep:#132C42;--darker:#0E2233;
-  --gold:#E8A33D;--gold-dark:#D28F28;
+  --navy:#1F4461;--deep:#17374F;--darker:#102A3E;
+  --gold:#C7A164;--gold-dark:#AD8A4F;--sea:#90B5BB;
   --bg:#FFFFFF;--bg-gray:#F2F4F6;
   --ink:#1A2733;--gray:#51606E;--line:#DFE4E8;
   --disp:'Archivo',sans-serif;--body:'Public Sans',sans-serif;
@@ -72,7 +72,7 @@ a{color:inherit}
 h1,h2,h3,h4{font-family:var(--disp)}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--disp);font-weight:800;font-size:16px;letter-spacing:.01em;text-transform:uppercase;text-decoration:none;padding:17px 30px;border-radius:5px;border:none;cursor:pointer;transition:transform .12s,background .15s,box-shadow .15s}
-.btn.gold{background:var(--gold);color:var(--darker);box-shadow:0 4px 14px rgba(232,163,61,.35)}
+.btn.gold{background:var(--gold);color:var(--darker);box-shadow:0 4px 14px rgba(199,161,100,.35)}
 .btn.gold:hover{background:var(--gold-dark);transform:translateY(-2px)}
 .btn.navy{background:var(--navy);color:#fff}
 .btn.navy:hover{background:var(--deep);transform:translateY(-2px)}
@@ -89,7 +89,7 @@ h1,h2,h3,h4{font-family:var(--disp)}
 @media(max-width:640px){.topbar .hide-m{display:none}.topbar .wrap{justify-content:center}}
 
 /* header */
-header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 12px rgba(14,34,51,.08)}
+header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 12px rgba(16,42,62,.08)}
 .nav{display:flex;align-items:center;justify-content:space-between;min-height:82px;gap:22px}
 .logo{display:block;flex-shrink:0}
 .logo img{height:48px;width:auto}
@@ -104,7 +104,7 @@ nav a:hover{color:var(--navy)}
 .burger{display:none;background:none;border:2px solid var(--line);border-radius:5px;padding:9px 11px;cursor:pointer}
 .burger span{display:block;width:22px;height:2.5px;background:var(--navy);margin:4px 0;border-radius:2px}
 @media(max-width:1020px){
-  nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:6px 28px 16px;box-shadow:0 14px 24px rgba(14,34,51,.12)}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:6px 28px 16px;box-shadow:0 14px 24px rgba(16,42,62,.12)}
   nav ul.open{display:flex}
   nav li{border-bottom:1px solid var(--bg-gray)}
   nav a{display:block;padding:14px 0}
@@ -117,9 +117,9 @@ nav a:hover{color:var(--navy)}
 .hero{position:relative;color:#fff;min-height:640px;display:flex;align-items:center;isolation:isolate}
 .hero .bg{position:absolute;inset:0;z-index:-2}
 .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
-.hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(14,34,51,.94) 0%,rgba(19,44,66,.88) 42%,rgba(19,44,66,.45) 75%,rgba(19,44,66,.25) 100%)}
+.hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(16,42,62,.94) 0%,rgba(19,44,66,.88) 42%,rgba(19,44,66,.45) 75%,rgba(19,44,66,.25) 100%)}
 .hero .wrap{padding-top:84px;padding-bottom:84px;width:100%}
-.hero .kicker{display:inline-flex;align-items:center;gap:10px;background:rgba(232,163,61,.15);border:1px solid rgba(232,163,61,.5);color:var(--gold);font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:4px;margin-bottom:24px}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;background:rgba(199,161,100,.16);border:1px solid rgba(199,161,100,.55);color:var(--gold);font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:4px;margin-bottom:24px}
 .hero .kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);animation:blink 2.2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 .hero h1{font-weight:900;font-size:clamp(38px,5.6vw,68px);line-height:1.02;letter-spacing:-.015em;text-transform:uppercase;max-width:820px;margin-bottom:22px}
@@ -152,8 +152,8 @@ nav a:hover{color:var(--navy)}
 
 /* services */
 .svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.svc{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 3px 18px rgba(14,34,51,.08);text-decoration:none;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
-.svc:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(14,34,51,.16)}
+.svc{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 3px 18px rgba(16,42,62,.08);text-decoration:none;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(16,42,62,.16)}
 .svc .img{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--deep)}
 .svc .img img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
 .svc:hover .img img{transform:scale(1.06)}
@@ -188,8 +188,8 @@ nav a:hover{color:var(--navy)}
 
 /* process */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.stp{background:#fff;border-radius:8px;padding:32px 26px 30px;box-shadow:0 3px 18px rgba(14,34,51,.08);position:relative}
-.stp .n{position:absolute;top:-18px;left:24px;width:44px;height:44px;border-radius:8px;background:var(--gold);color:var(--darker);font-family:var(--disp);font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(232,163,61,.4)}
+.stp{background:#fff;border-radius:8px;padding:32px 26px 30px;box-shadow:0 3px 18px rgba(16,42,62,.08);position:relative}
+.stp .n{position:absolute;top:-18px;left:24px;width:44px;height:44px;border-radius:8px;background:var(--gold);color:var(--darker);font-family:var(--disp);font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(199,161,100,.4)}
 .stp h3{font-weight:800;font-size:18px;text-transform:uppercase;color:var(--deep);margin:14px 0 10px}
 .stp p{font-size:14.5px;color:var(--gray);line-height:1.6}
 @media(max-width:920px){.steps{grid-template-columns:1fr 1fr;gap:30px 22px}}
@@ -199,25 +199,25 @@ nav a:hover{color:var(--navy)}
 .guarantee{background:var(--gold)}
 .guarantee .wrap{display:flex;align-items:center;justify-content:space-between;gap:26px;padding-top:34px;padding-bottom:34px;flex-wrap:wrap}
 .guarantee .txt b{display:block;font-family:var(--disp);font-weight:900;font-size:24px;text-transform:uppercase;color:var(--darker);letter-spacing:-.005em}
-.guarantee .txt span{font-weight:600;color:#5C4614;font-size:15.5px}
+.guarantee .txt span{font-weight:600;color:#54431F;font-size:15.5px}
 .guarantee .btn{background:var(--darker);color:#fff;box-shadow:none}
 .guarantee .btn:hover{background:var(--deep)}
 
 /* work strip */
 .jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.jobs figure{position:relative;border-radius:8px;overflow:hidden;background:var(--deep);box-shadow:0 3px 18px rgba(14,34,51,.1)}
+.jobs figure{position:relative;border-radius:8px;overflow:hidden;background:var(--deep);box-shadow:0 3px 18px rgba(16,42,62,.1)}
 .jobs img{width:100%;height:330px;object-fit:cover}
-.jobs figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(14,34,51,.94));color:#DAE4EA;font-size:13.5px}
+.jobs figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(16,42,62,.94));color:#DAE4EA;font-size:13.5px}
 .jobs figcaption b{display:block;font-family:var(--disp);font-weight:800;font-size:16px;text-transform:uppercase;color:#fff;margin-bottom:3px}
 @media(max-width:900px){.jobs{grid-template-columns:1fr}}
 
 /* reviews */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.rev{background:#fff;border-radius:8px;padding:30px 28px;box-shadow:0 3px 18px rgba(14,34,51,.08);position:relative}
+.rev{background:#fff;border-radius:8px;padding:30px 28px;box-shadow:0 3px 18px rgba(16,42,62,.08);position:relative}
 .rev .stars{color:var(--gold);font-size:19px;letter-spacing:3px;margin-bottom:14px}
 .rev p{font-size:15.5px;color:var(--gray);line-height:1.65;margin-bottom:18px}
 .rev b{font-family:var(--disp);font-weight:700;font-size:14.5px;color:var(--deep)}
-.rev .tag{position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;letter-spacing:.06em;color:#B08A3F;border:1.5px dashed #E3CFA5;padding:3px 8px;border-radius:4px;text-transform:uppercase}
+.rev .tag{position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;letter-spacing:.06em;color:#8F764A;border:1.5px dashed #D9C9A8;padding:3px 8px;border-radius:4px;text-transform:uppercase}
 @media(max-width:900px){.revs{grid-template-columns:1fr}}
 .rev-cta{text-align:center;margin-top:36px}
 
@@ -229,13 +229,13 @@ nav a:hover{color:var(--navy)}
 .areas p{color:#C4D2DB;font-size:17px;margin-bottom:28px;max-width:400px}
 .city-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .city-grid span{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:12px 16px;font-weight:600;font-size:14.5px;color:#DAE4EA;transition:background .15s}
-.city-grid span:hover{background:rgba(232,163,61,.18);border-color:rgba(232,163,61,.5)}
+.city-grid span:hover{background:rgba(144,181,187,.16);border-color:rgba(199,161,100,.55)}
 @media(max-width:920px){.areas .wrap{grid-template-columns:1fr;gap:44px}}
 @media(max-width:560px){.city-grid{grid-template-columns:1fr 1fr}}
 
 /* faq */
 .faqs{max-width:840px;margin:0 auto}
-.faq{background:#fff;border-radius:8px;margin-bottom:14px;box-shadow:0 2px 12px rgba(14,34,51,.07);overflow:hidden}
+.faq{background:#fff;border-radius:8px;margin-bottom:14px;box-shadow:0 2px 12px rgba(16,42,62,.07);overflow:hidden}
 .faq summary{list-style:none;cursor:pointer;padding:22px 26px;display:flex;justify-content:space-between;gap:18px;align-items:center;font-family:var(--disp);font-weight:700;font-size:18px;color:var(--deep)}
 .faq summary::-webkit-details-marker{display:none}
 .faq .ic{width:30px;height:30px;border-radius:6px;background:var(--bg-gray);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex-shrink:0;transition:.18s}
@@ -246,7 +246,7 @@ nav a:hover{color:var(--navy)}
 .final{position:relative;color:#fff;isolation:isolate}
 .final .bg{position:absolute;inset:0;z-index:-2}
 .final .bg img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
-.final .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,34,51,.96) 0%,rgba(19,44,66,.92) 50%,rgba(19,44,66,.8) 100%)}
+.final .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(16,42,62,.96) 0%,rgba(19,44,66,.92) 50%,rgba(19,44,66,.8) 100%)}
 .final .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:92px;padding-bottom:92px}
 .final .over{font-family:var(--disp);font-weight:800;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .final h2{font-weight:900;font-size:clamp(32px,4.2vw,50px);line-height:1.04;text-transform:uppercase;margin-bottom:18px}
@@ -306,7 +306,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
 
 <div class="topbar">
   <div class="wrap">
-    <span><b>24/7 EMERGENCY SERVICE</b><span class="hide-m"> — Mold · Water Damage · Flooded Basements</span></span>
+    <span><b>24/7 EMERGENCY SERVICE</b><span class="hide-m"> · Mold · Water Damage · Flooded Basements</span></span>
     <span class="hide-m">Serving All of Metro Atlanta &nbsp;|&nbsp; <a href="tel:+14707605249">(470) 760-5249</a></span>
   </div>
 </div>
@@ -335,9 +335,9 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
   <div class="bg"><img src="images/hero-bg.jpg" alt="" fetchpriority="high"></div>
   <div class="shade"></div>
   <div class="wrap">
-    <span class="kicker">Answering Now — 24 Hours a Day</span>
+    <span class="kicker">The Light's On. We Answer 24/7.</span>
     <h1>Mold problems.<br>Wet basements.<br><span>Fixed for good.</span></h1>
-    <p>Metro Atlanta's mold remediation and waterproofing pros. Free inspection, a written price before we start, and lab-tested proof when we're done.</p>
+    <p>Mold remediation and basement waterproofing for metro Atlanta. One free inspection, one written price, and lab results at the end that prove it's handled.</p>
     <div class="ctas">
       <a class="btn gold" href="tel:+14707605249">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -369,7 +369,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
     <div class="head">
       <div class="over">What We Do</div>
       <h2>One Call Fixes the Mold <em style="font-style:normal;color:var(--gold-dark)">and</em> the Water</h2>
-      <p>Mold grows because water gets in. Companies that only treat one half leave you doing this again next year. We handle the whole problem.</p>
+      <p>Mold is what you see. Water is why it's there. Most companies treat one and leave the other, which is why it keeps coming back. We fix both, once.</p>
     </div>
     <div class="svcs">
       <a class="svc" href="#quote">
@@ -405,7 +405,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
         </div>
       </a>
       <a class="svc" href="#quote">
-        <div class="img"><div class="need">CRAWLSPACE PHOTO — TO ADD</div></div>
+        <div class="img"><div class="need">CRAWLSPACE PHOTO · TO ADD</div></div>
         <div class="txt">
           <h3>Crawlspace Encapsulation</h3>
           <p>Vapor barrier, drainage, and dehumidification that turn a damp crawlspace into a sealed, dry part of your home. Your air quality will thank you.</p>
@@ -430,7 +430,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
     <div>
       <div class="over">Why Homeowners Pick Us</div>
       <h2>No Scare Tactics. No Surprise Bills. No Coming Back Next Year.</h2>
-      <p>The mold industry has a reputation problem: scary sales pitches and vague invoices. We built this company to be the opposite.</p>
+      <p>This industry runs on fear and fine print. We'd rather run on proof. Here's what that looks like on your job:</p>
       <ul class="checks">
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg><div><b>Free inspection, honest answer.</b> <span>If you don't need remediation, we say so and leave. No charge.</span></div></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg><div><b>Written price before work starts.</b> <span>The estimate is the bill. Surprises get shown to you first, not invoiced.</span></div></li>
@@ -455,9 +455,9 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
     </div>
     <div class="steps">
       <div class="stp"><span class="n">1</span><h3>Call or Book Online</h3><p>Tell us what you're seeing or smelling. Emergencies get dispatched immediately, day or night.</p></div>
-      <div class="stp"><span class="n">2</span><h3>Free Inspection</h3><p>We check moisture, find the source, and test if needed. You get straight answers on the spot.</p></div>
+      <div class="stp"><span class="n">2</span><h3>Free Inspection</h3><p>We track the moisture to its source and test where it matters. You get the straight answer on the spot.</p></div>
       <div class="stp"><span class="n">3</span><h3>Written Price</h3><p>An itemized quote before any work starts. What we write down is what you pay.</p></div>
-      <div class="stp"><span class="n">4</span><h3>Fixed &amp; Proven</h3><p>We do the work, fix the water source, and hand you lab-tested results and warranties.</p></div>
+      <div class="stp"><span class="n">4</span><h3>Fixed &amp; Proven</h3><p>We do the work, stop the water, and hand you the lab results and warranty to keep.</p></div>
     </div>
   </div>
 </section>
@@ -465,7 +465,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
 <!-- guarantee -->
 <div class="guarantee">
   <div class="wrap">
-    <div class="txt"><b>If we can't find the source, the inspection costs you nothing.</b><span>That's how confident we are. Get answers today.</span></div>
+    <div class="txt"><b>If we can't find the source, the inspection costs you nothing.</b><span>That's the Beacon standard. Get your answer today.</span></div>
     <a class="btn" href="tel:+14707605249">Call (470) 760-5249</a>
   </div>
 </div>
@@ -494,9 +494,9 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
     </div>
     <!-- placeholders: swap for 3 real Google reviews + link button to GBP -->
     <div class="revs">
-      <div class="rev"><span class="tag">Placeholder</span><div class="stars">★★★★★</div><p>"Real Google review goes here — pick one naming a specific service and city."</p><b>Customer Name — City, GA</b></div>
-      <div class="rev"><span class="tag">Placeholder</span><div class="stars">★★★★★</div><p>"Second review — ideally a late-night emergency story that backs up the 24/7 promise."</p><b>Customer Name — City, GA</b></div>
-      <div class="rev"><span class="tag">Placeholder</span><div class="stars">★★★★★</div><p>"Third review — best one is a customer you told they DIDN'T need remediation."</p><b>Customer Name — City, GA</b></div>
+      <div class="rev"><span class="tag">Placeholder</span><div class="stars">★★★★★</div><p>"Real Google review goes here · pick one naming a specific service and city."</p><b>Customer Name · City, GA</b></div>
+      <div class="rev"><span class="tag">Placeholder</span><div class="stars">★★★★★</div><p>"Second review · ideally a late-night emergency story that backs up the 24/7 promise."</p><b>Customer Name · City, GA</b></div>
+      <div class="rev"><span class="tag">Placeholder</span><div class="stars">★★★★★</div><p>"Third review · best one is a customer you told they DIDN'T need remediation."</p><b>Customer Name · City, GA</b></div>
     </div>
     <div class="rev-cta"><a class="btn navy" href="#">Read All Google Reviews</a><!-- placeholder: GBP link --></div>
   </div>
@@ -508,8 +508,8 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
     <div>
       <div class="over">Service Area</div>
       <h2>All of Metro Atlanta</h2>
-      <p>In-town to the north Georgia suburbs. If you're near Atlanta, we come to you, any hour, any day.</p>
-      <a class="btn gold" href="tel:+14707605249">Check Your Address — Call Us</a>
+      <p>From Buckhead basements to Gainesville crawlspaces. If you're anywhere in the metro, we'll be there, any hour, any day.</p>
+      <a class="btn gold" href="tel:+14707605249">Check Your Address · Call Us</a>
     </div>
     <div class="city-grid">
       <span>Atlanta</span><span>Marietta</span><span>Alpharetta</span><span>Roswell</span><span>Sandy Springs</span><span>Johns Creek</span><span>Dunwoody</span><span>Brookhaven</span><span>Decatur</span><span>Smyrna</span><span>Kennesaw</span><span>Woodstock</span><span>Duluth</span><span>Lawrenceville</span><span>Suwanee</span><span>Cumming</span><span>Buford</span><span>Gainesville</span><span>Canton</span><span>Norcross</span><span>Peachtree Corners</span><span>Snellville</span><span>Stone Mountain</span><span>Douglasville</span>
@@ -543,9 +543,9 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
   <div class="shade"></div>
   <div class="wrap">
     <div class="pitch">
-      <div class="over">Free Inspection — No Obligation</div>
+      <div class="over">Free Inspection · No Obligation</div>
       <h2>Find Out What's Really <span>Behind That Wall</span></h2>
-      <p>Book your free inspection. We'll find the problem, show you the proof, and give you a written price on the spot.</p>
+      <p>One visit gets you straight answers and a written price. If something's growing back there, we're the ones who end it.</p>
       <div class="callrow">
         <a class="orcall" href="tel:+14707605249"><small>Prefer to call?</small><b>(470) 760-5249</b></a>
       </div>
@@ -568,13 +568,13 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
               <option>Water damage / emergency</option>
               <option>Basement waterproofing</option>
               <option>Crawlspace encapsulation</option>
-              <option>Not sure — need advice</option>
+              <option>Not sure · need advice</option>
             </select>
           </div>
         </div>
         <div class="fld"><label for="m">What's Going On? (optional)</label><textarea id="m" name="message" placeholder="Musty smell in the basement, water after heavy rain..."></textarea></div>
         <button class="btn gold" type="submit">Send My Request</button>
-        <p class="fine">Emergency right now? Skip the form — call <a href="tel:+14707605249">(470)&nbsp;760-5249</a></p>
+        <p class="fine">Emergency right now? Skip the form · call <a href="tel:+14707605249">(470)&nbsp;760-5249</a></p>
       </form>
       <div class="done" id="done">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
@@ -590,7 +590,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
     <div class="cols">
       <div class="fl">
         <b>Southern Beacon</b><i>Environmental</i>
-        <p>Mold remediation, water damage cleanup, and basement waterproofing for metro Atlanta. Fixed for good, with proof.</p>
+        <p>Guiding metro Atlanta homes back to dry and healthy. Mold remediation, water damage cleanup, and waterproofing, done once and proven.</p>
         <a class="tel" href="tel:+14707605249">(470) 760-5249</a>
         <div class="nap">[Street Address]<br>[City], GA [ZIP]<br>Open 24 Hours, 7 Days a Week</div><!-- placeholder NAP: match GBP exactly -->
       </div>
