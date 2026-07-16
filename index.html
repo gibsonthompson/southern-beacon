@@ -382,16 +382,22 @@ document.getElementById('lead').addEventListener('submit',function(e){
 });
 document.getElementById('yr').textContent=new Date().getFullYear();
 
-// reveal sticky call dock only after the hero scrolls out of view
+// show sticky call dock only after the hero is scrolled past
 (function(){
-  var dock=document.querySelector('.dock'), hero=document.querySelector('.hero');
+  var dock=document.querySelector('.dock');
+  var hero=document.querySelector('.hero')||document.querySelector('.pg-hero');
   if(!dock||!hero) return;
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){
-      dock.classList.toggle('show', !es[0].isIntersecting);
-    },{threshold:0, rootMargin:'-60px 0px 0px 0px'}).observe(hero);
-  } else { dock.classList.add('show'); }
+  function update(){
+    var trigger=hero.offsetTop+hero.offsetHeight-90;
+    if(window.pageYOffset>trigger){dock.classList.add('show');}
+    else{dock.classList.remove('show');}
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update,{passive:true});
+  update();
 })();
+
+
 
 </script>
 </body>
