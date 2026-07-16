@@ -291,3 +291,118 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
 .pg-faq{margin-top:8px}
 @media(max-width:960px){.pg-grid{grid-template-columns:1fr;gap:40px}.pg-aside{position:static}}
 @media(max-width:560px){.pg-main .photo img{height:240px}}
+
+/* =====================================================
+   MOBILE OPTIMIZATION LAYER
+   Tightens spacing, sizes touch targets, reduces
+   desktop-scale padding for real phone ergonomics.
+   ===================================================== */
+@media(max-width:760px){
+  /* tighter global rhythm */
+  .sec{padding:52px 0}
+  .sec.gray{padding:52px 0}
+  .head{margin-bottom:34px}
+  .head h2{font-size:26px;line-height:1.12}
+  .head p{font-size:16px;margin-top:12px}
+
+  /* hero: less vertical, punchier */
+  .hero .wrap{padding-top:44px;padding-bottom:48px}
+  .hero .kicker{margin-bottom:18px;font-size:12px}
+  .hero h1{margin-bottom:16px}
+  .hero p{font-size:16.5px;line-height:1.5;margin-bottom:26px}
+  .hero .ctas{gap:12px;margin-bottom:32px}
+  .hero .ctas .btn{width:100%}
+  .hero .marks{gap:12px;border-top:1px solid rgba(255,255,255,.14);padding-top:22px}
+
+  /* full-width primary buttons read as tappable on phones */
+  .btn{padding:16px 22px}
+
+  /* badge band: compact 2-up with less padding */
+  .band .cell{padding:18px 16px;gap:12px}
+  .band .ph-badge{width:44px;height:44px}
+  .band b{font-size:15px}
+  .band span{font-size:12px}
+
+  /* services: tighter cards, bigger tap area on CTA */
+  .svcs{gap:18px}
+  .svc .txt{padding:22px 22px 24px}
+  .svc h3{font-size:19px}
+  .svc p{font-size:15px}
+
+  /* why us */
+  .why .wrap{padding-top:52px;padding-bottom:52px;gap:40px}
+  .why h2{font-size:26px;line-height:1.12}
+  .why>.wrap>div>p{font-size:16.5px;margin-bottom:24px}
+  .checks li{font-size:15.5px}
+  .why .btn{width:100%}
+  .why .photo img{height:340px}
+  .why .photo .years{padding:16px 20px;right:12px}
+  .why .photo .years b{font-size:28px}
+
+  /* process cards */
+  .steps{gap:34px}
+  .stp{padding:28px 22px 24px}
+
+  /* guarantee: stack, center, full-width button */
+  .guarantee .wrap{padding:30px 18px;flex-direction:column;text-align:center;gap:18px}
+  .guarantee .txt b{font-size:21px}
+  .guarantee .btn{width:100%}
+
+  /* recent jobs */
+  .jobs{gap:16px}
+  .jobs img{height:280px}
+
+  /* reviews */
+  .rev{padding:26px 24px}
+  .rev-cta .btn{width:100%}
+
+  /* areas */
+  .areas .wrap{padding-top:52px;padding-bottom:52px}
+  .areas h2{font-size:26px}
+  .areas .btn{width:100%}
+  .city-grid{gap:8px}
+  .city-grid span{padding:11px 12px;font-size:13.5px;text-align:center}
+
+  /* faq: larger tap targets */
+  .faq summary{padding:18px 20px;font-size:16.5px}
+  .faq .a{padding:0 20px 20px;font-size:15.5px}
+
+  /* final cta / form */
+  .final .wrap{padding-top:52px;padding-bottom:52px}
+  .final h2{font-size:28px;line-height:1.1}
+  .final .pitch p{font-size:16.5px;margin-bottom:24px}
+  .formbox{padding:26px 20px}
+  .formbox h3{font-size:21px}
+  .fld input,.fld select,.fld textarea{padding:14px 13px;font-size:16px} /* 16px stops iOS zoom-on-focus */
+  .formbox .btn{padding:16px}
+
+  /* footer breathing room */
+  footer .cols{padding:48px 0 36px;gap:32px}
+  footer .base{flex-direction:column;text-align:center;gap:8px}
+
+  /* service pages */
+  .pg-hero .wrap{padding-top:40px;padding-bottom:40px}
+  .pg-hero h1{margin-bottom:14px}
+  .pg-hero p{font-size:16.5px}
+  .pg-hero .ctas .btn{width:100%}
+  .pg-body{padding:48px 0}
+  .pg-grid{gap:32px}
+  .pg-main h2{margin:32px 0 14px}
+  .pg-main p{font-size:16px}
+  .pg-main ul.incl li{font-size:15.5px}
+  .aside-card{padding:24px 22px}
+  .aside-card .btn{width:100%}
+}
+
+/* very small phones */
+@media(max-width:380px){
+  .wrap{padding:0 15px}
+  .head h2{font-size:23px}
+  .why h2,.areas h2{font-size:23px}
+  .hdr-phone{display:none} /* topbar + dock already cover calling */
+}
+
+/* ensure comfortable tap targets everywhere on touch */
+@media(hover:none){
+  nav a,.faq summary,.city-grid span,.svc,.btn{touch-action:manipulation}
+}
