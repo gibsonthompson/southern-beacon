@@ -305,6 +305,43 @@ section.block.tight{padding:76px 0}
 @media(max-width:940px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
 
+/* ---------- services: photo-led feature rows ---------- */
+.svc-intro{display:grid;grid-template-columns:1fr .78fr;gap:56px;align-items:end;margin-bottom:8px}
+.svc-intro .lead-note{font-size:16px;color:var(--ink-soft);border-left:2px solid var(--gold);padding-left:20px;line-height:1.7}
+@media(max-width:820px){.svc-intro{grid-template-columns:1fr;gap:22px}}
+
+.svc-band{margin-top:60px}
+.band-label{display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.band-label .n{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:.1em}
+.band-label h3{font-family:var(--display);font-weight:850;font-size:23px;color:var(--navy);font-variation-settings:'wdth' 108;letter-spacing:-.01em}
+.band-label .rule{flex:1;height:1px;background:var(--line)}
+
+/* hero feature (first service in each band = big) */
+.feature{display:grid;grid-template-columns:1.05fr 1fr;gap:0;background:var(--white);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:22px}
+.feature .ph{position:relative;min-height:340px;background:var(--night)}
+.feature .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feature .ph .tape{position:absolute;top:16px;left:16px;background:var(--gold);color:var(--deep);font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:3px}
+.feature .body{padding:40px 40px 36px;display:flex;flex-direction:column;justify-content:center}
+.feature .body h4{font-family:var(--display);font-weight:800;font-size:27px;letter-spacing:-.015em;color:var(--ink);margin-bottom:14px;line-height:1.1}
+.feature .body p{font-size:16px;color:var(--ink-soft);line-height:1.7;margin-bottom:18px}
+.feature .body .link{font-family:var(--body);font-weight:700;font-size:15px;color:var(--navy);text-decoration:none;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;border-bottom:2px solid var(--gold);padding-bottom:2px;transition:gap .18s}
+.feature .body .link:hover{gap:13px}
+@media(max-width:820px){.feature{grid-template-columns:1fr}.feature .ph{min-height:240px}.feature .body{padding:30px 26px}}
+
+/* supporting services row (photo-topped tiles, no floating icons) */
+.svc-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tile{background:var(--white);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.tile:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(18,40,60,.12);border-color:var(--seafoam)}
+.tile .ph{position:relative;aspect-ratio:4/3;background:var(--night);overflow:hidden}
+.tile .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.tile:hover .ph img{transform:scale(1.05)}
+.tile .ph .badge{position:absolute;top:14px;left:14px;background:rgba(13,30,47,.82);color:#DCE7E9;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:5px 10px;border-radius:3px;backdrop-filter:blur(4px)}
+.tile .body{padding:22px 24px 24px}
+.tile h4{font-family:var(--display);font-weight:750;font-size:18px;color:var(--ink);margin-bottom:8px;letter-spacing:-.005em}
+.tile p{font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+@media(max-width:820px){.svc-row{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.svc-row{grid-template-columns:1fr}}
+
 /* ---------- process ---------- */
 .process{background:var(--night);color:#DCE7E9;position:relative;overflow:hidden}
 .process::after{content:'';position:absolute;right:-140px;top:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(31,68,97,.55),transparent 65%);pointer-events:none}
@@ -466,7 +503,7 @@ footer .bottom{display:flex;justify-content:space-between;align-items:center;gap
         <span class="kicker">Mold Remediation &amp; Waterproofing in Metro Atlanta</span>
         <span class="display">Find the problem.<br>Fix the water.<br><em>Prove it's clean.</em></span>
       </h1>
-      <p class="lede">Mold and water problems are stressful because you can't see what's really happening behind your walls. We can. Southern Beacon inspects, tests, remediates, and then verifies the results, so you're not taking anyone's word for it, including ours.</p>
+      <p class="lede">The worst part of a mold or water problem is not knowing how bad it really is behind the wall. We find out, show you, and fix it, then test the air to prove it's handled. You'll never have to take our word for anything.</p>
       <div class="cta-row">
         <a class="btn gold" href="tel:+14707605249">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -575,101 +612,104 @@ footer .bottom{display:flex;justify-content:space-between;align-items:center;gap
 <!-- ======================= SERVICES ======================= -->
 <section class="block services" id="services">
   <div class="wrap">
-    <div class="sec-head rv">
-      <div class="eyebrow"><span class="rays"><i></i><i></i><i></i></span>What We Do</div>
-      <h2>Two sides of the same problem, handled by one team.</h2>
-      <p>Mold is a symptom. Water is the cause. Most companies only treat one of them, which is how the problem comes back. We do both, so it doesn't.</p>
+    <div class="svc-intro rv">
+      <div class="sec-head" style="margin-bottom:0">
+        <div class="eyebrow"><span class="rays"><i></i><i></i><i></i></span>What We Do</div>
+        <h2>Mold is the symptom. Water is the reason.</h2>
+      </div>
+      <p class="lead-note">Most companies scrub the mold and leave. Three months later it's back, because nobody dealt with the water that grew it. We handle both ends of the problem, which is the only way it actually stays gone.</p>
     </div>
 
-    <div class="fam rv">
-      <div class="fam-head">
-        <h3>Mold &amp; Air Quality</h3>
-        <span class="tag">Inspect · Test · Remediate · Verify</span>
+    <!-- BAND 1: MOLD -->
+    <div class="svc-band rv">
+      <div class="band-label">
+        <span class="n">01</span>
+        <h3>Mold, Testing &amp; Air Quality</h3>
+        <span class="rule"></span>
       </div>
-      <div class="svc-grid">
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <h4>Mold Inspection &amp; Testing</h4>
-          <p>Visual inspection, moisture mapping, and lab-analyzed air and surface sampling. You get a written report of what's growing, where, and why.</p>
-          <span class="more">Learn more →</span>
+
+      <div class="feature">
+        <div class="ph">
+          <img src="images/services/remediation.jpg" alt="Sealed containment with poly sheeting and protected floors set up for mold remediation on a metro Atlanta job" loading="lazy" width="1200" height="900">
+          <span class="tape">Our job site</span>
+        </div>
+        <div class="body">
+          <h4>Mold Remediation Done to Standard</h4>
+          <p>Containment goes up first. Then negative air, HEPA filtration, and careful removal of anything the mold got into. We treat what stays, dry it out, and fix the moisture source so you're not calling someone about the same wall next spring. No cutting corners because the drywall was going to get painted over anyway.</p>
+          <a class="link" href="#inspect">Get it looked at →</a>
+        </div>
+      </div>
+
+      <div class="svc-row">
+        <a class="tile" href="#inspect">
+          <div class="ph"><img src="images/services/mold-testing.jpg" alt="Air sampling pump running during a mold inspection" loading="lazy" width="1200" height="900"><span class="badge">Lab verified</span></div>
+          <div class="body">
+            <h4>Inspection &amp; Testing</h4>
+            <p>We map moisture, pull air and surface samples, and send them to an accredited lab. You get a written report telling you what's actually there, not a guess based on a sniff and a flashlight.</p>
+          </div>
         </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h4>Mold Remediation</h4>
-          <p>Full containment, negative air pressure, HEPA filtration, safe removal of affected materials, and antimicrobial treatment. By the book, every time.</p>
-          <span class="more">Learn more →</span>
+        <a class="tile" href="#inspect">
+          <div class="ph"><img src="images/services/air-quality.jpg" alt="Air quality clearance testing equipment after remediation" loading="lazy" width="1200" height="900"><span class="badge">Before you pay</span></div>
+          <div class="body">
+            <h4>Clearance Air Testing</h4>
+            <p>When we say a job's done, we test the air to prove it. You keep the lab results. That's the difference between "looks clean" and "the numbers say clean."</p>
+          </div>
         </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m6.3 6.3 2.8 2.8"/><path d="M2 12h4"/><path d="m6.3 17.7 2.8-2.8"/><path d="M12 22v-4"/><path d="m17.7 17.7-2.8-2.8"/><path d="M22 12h-4"/><path d="m17.7 6.3-2.8 2.8"/><circle cx="12" cy="12" r="2.5"/></svg>
-          <h4>Black Mold Removal</h4>
-          <p>Suspect Stachybotrys? We identify it with lab testing, remove it under strict containment, and clearance-test the space before you move back in.</p>
-          <span class="more">Learn more →</span>
-        </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
-          <h4>Air Quality &amp; Clearance Testing</h4>
-          <p>Independent-grade air sampling before, during, and after remediation. The report tells you the air is clean. Not us. The data.</p>
-          <span class="more">Learn more →</span>
-        </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16"/><path d="M2 22h20"/><path d="M9 9h1"/><path d="M14 9h1"/><path d="M9 13h1"/><path d="M14 13h1"/><path d="M9 17h1"/><path d="M14 17h1"/></svg>
-          <h4>Commercial Remediation</h4>
-          <p>Offices, rentals, and facilities. Containment that keeps you operating, documentation that keeps you compliant, schedules that respect your business.</p>
-          <span class="more">Learn more →</span>
-        </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 9.5 14.5"/><path d="M9 20H4v-5"/><path d="m4 20 6.5-6.5"/></svg>
-          <h4>Odor &amp; Moisture Source Tracing</h4>
-          <p>That smell is coming from somewhere. Thermal imaging and moisture meters find hidden leaks and condensation problems before they become demolition.</p>
-          <span class="more">Learn more →</span>
+        <a class="tile" href="#inspect">
+          <div class="ph"><img src="images/services/commercial.jpg" alt="Commercial mold remediation setup in an office space" loading="lazy" width="1200" height="900"><span class="badge">Commercial</span></div>
+          <div class="body">
+            <h4>Offices &amp; Rentals</h4>
+            <p>Landlords, property managers, and business owners. We contain the work so you can keep operating, and we document everything so you're covered if a tenant asks.</p>
+          </div>
         </a>
       </div>
     </div>
 
-    <div class="fam rv">
-      <div class="fam-head">
-        <h3>Water &amp; Structural Protection</h3>
-        <span class="tag">Stop It · Drain It · Seal It · Dry It</span>
+    <!-- BAND 2: WATER -->
+    <div class="svc-band rv">
+      <div class="band-label">
+        <span class="n">02</span>
+        <h3>Waterproofing &amp; Water Damage</h3>
+        <span class="rule"></span>
       </div>
-      <div class="svc-grid">
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7 6.3 8.4a8 8 0 1 0 11.4 0L12 2.7z"/></svg>
-          <h4>Basement Waterproofing</h4>
-          <p>Interior drainage systems, wall sealing, and sump pump installation engineered for Georgia clay and hydrostatic pressure. Backed by a written warranty.</p>
-          <span class="more">Learn more →</span>
+
+      <div class="feature">
+        <div class="ph">
+          <img src="images/services/waterproofing.jpg" alt="Basement wall showing a waterline and drying setup during a waterproofing job in metro Atlanta" loading="lazy" width="1200" height="900">
+          <span class="tape">Our job site</span>
+        </div>
+        <div class="body">
+          <h4>Basement &amp; Foundation Waterproofing</h4>
+          <p>Georgia red clay holds water against your foundation and pushes it right through the block. We figure out where it's actually getting in, then stop it with the right mix of interior drainage, wall sealing, and a sump system sized for the job. Backed by a written warranty, because we plan on being right.</p>
+          <a class="link" href="#inspect">Stop the water →</a>
+        </div>
+      </div>
+
+      <div class="svc-row">
+        <a class="tile" href="#inspect">
+          <div class="ph"><img src="images/services/water-damage.jpg" alt="Air mover drying a wall after water damage" loading="lazy" width="1200" height="900"><span class="badge">24/7</span></div>
+          <div class="body">
+            <h4>Water Damage Cleanup</h4>
+            <p>Pipe let go at 2am? We answer and we come out. Extract, dry, and log moisture daily until the structure reads dry, so mold never gets its shot in the first place.</p>
+          </div>
         </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-8 9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M5 17h14"/></svg>
-          <h4>Crawlspace Encapsulation</h4>
-          <p>Vapor barriers, drainage, and dehumidification that turn a damp, moldy crawlspace into a dry, sealed part of your home. Your floors and your lungs will notice.</p>
-          <span class="more">Learn more →</span>
+        <a class="tile" href="#inspect">
+          <div class="ph"><img src="images/services/ph-crawlspace.jpg" alt="Crawlspace encapsulation photo placeholder" loading="lazy" width="1200" height="900"><span class="badge">Photo coming</span></div>
+          <div class="body">
+            <h4>Crawlspace Encapsulation</h4>
+            <p>A wet crawlspace feeds the air your whole house breathes. We seal it, drain it, and add a dehumidifier so it stops being the moldiest room you never go in.</p>
+          </div>
         </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          <h4>24/7 Water Damage Cleanup</h4>
-          <p>Burst pipe, failed water heater, storm intrusion. We extract, dry, and document around the clock, and we monitor with moisture readings until it's verified dry.</p>
-          <span class="more">Learn more →</span>
-        </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.5L12 4l7 4.5V20"/><path d="M9 20v-6h6v6"/></svg>
-          <h4>Foundation Drainage &amp; French Drains</h4>
-          <p>Exterior grading, downspout routing, and French drain systems that move water away from your foundation instead of into your basement.</p>
-          <span class="more">Learn more →</span>
-        </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13a4 4 0 1 0 4 4"/><path d="M12 3v10"/><path d="m8 7 4-4 4 4"/></svg>
-          <h4>Sump Pumps &amp; Battery Backups</h4>
-          <p>Primary systems, battery backups for when storms take the power out, and maintenance so the pump works on the one night it absolutely has to.</p>
-          <span class="more">Learn more →</span>
-        </a>
-        <a class="svc" href="#inspect">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="6" width="18" height="15" rx="2"/><path d="m9 14 2 2 4-4"/></svg>
-          <h4>Structural Drying &amp; Dehumidification</h4>
-          <p>Commercial air movers, LGR dehumidifiers, and daily moisture logs. We dry the structure to documented standards, not to "feels dry."</p>
-          <span class="more">Learn more →</span>
+        <a class="tile" href="#inspect">
+          <div class="ph"><img src="images/services/ph-drainage.jpg" alt="French drain and foundation drainage photo placeholder" loading="lazy" width="1200" height="900"><span class="badge">Photo coming</span></div>
+          <div class="body">
+            <h4>Drainage &amp; Sump Systems</h4>
+            <p>French drains, regrading, downspout routing, and battery-backup sump pumps for the night the storm takes your power and your pump is the only thing between you and four inches of water.</p>
+          </div>
         </a>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -754,16 +794,16 @@ footer .bottom{display:flex;justify-content:space-between;align-items:center;gap
     </div>
     <div class="grid">
       <div class="card rv">
-        <h4>The truth, even when it costs us the job.</h4>
-        <p>If your "mold problem" is a cosmetic stain, we'll tell you and leave. Roughly a third of our inspections end with us recommending against remediation.</p>
+        <h4>We'll talk you out of work you don't need.</h4>
+        <p>Sometimes that stain is just a stain. If you don't have a mold problem worth paying to fix, we'll tell you that to your face and pack up. We'd rather earn the call you make next year.</p>
       </div>
       <div class="card rv">
-        <h4>Fixed scope, fixed price.</h4>
-        <p>The number we quote after inspection is the number you pay. If we find something unexpected, we stop, show you, and you decide.</p>
+        <h4>The quote is the price.</h4>
+        <p>What we write down after the inspection is what you pay. If we open a wall and find something nobody could have seen coming, we stop and show you before we touch it. You decide, not us.</p>
       </div>
       <div class="card rv">
-        <h4>Proof before payment is done.</h4>
-        <p>Every remediation ends with clearance testing and a documented report. Every waterproofing system carries a written warranty. You keep the paperwork.</p>
+        <h4>You keep the paperwork.</h4>
+        <p>Every mold job ends with lab-tested air results in your hands. Every waterproofing job comes with a written warranty. If you ever sell the house or fight an insurance claim, you'll be glad you have it.</p>
       </div>
     </div>
   </div>
