@@ -443,3 +443,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
 .note-box{background:#FFF8EC;border:1px solid rgba(199,161,100,.45);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 22px;margin:24px 0}
 .note-box b{display:block;font-family:var(--disp);font-weight:800;font-size:16px;color:var(--deep);margin-bottom:6px}
 .note-box p{font-size:15px;color:var(--gray);line-height:1.6;margin:0}
+
+/* lead form: honeypot (hidden from humans) + error message */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.err{color:#B3563F;font-size:14px;font-weight:600;margin:10px 0 0;min-height:1px}

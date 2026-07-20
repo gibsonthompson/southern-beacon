@@ -350,6 +350,8 @@
           </div>
         </div>
         <div class="fld"><label for="m">What's Going On? (optional)</label><textarea id="m" name="message" placeholder="Musty smell downstairs, dark spots on the ceiling, recent leak..."></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="company">Company</label><input id="company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+        <p class="err" id="leadErr" role="alert"></p>
         <button class="btn gold" type="submit">Submit Request</button>
         <p class="fine">Have an emergency? Call us directly at <a href="tel:+14707605249">(470)&nbsp;760-5249</a></p>
       </form>
@@ -423,10 +425,30 @@
 const burger=document.getElementById('burger'),menu=document.getElementById('menu');
 burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
-document.getElementById('lead').addEventListener('submit',function(e){
+var leadFormStarted=Date.now();
+document.getElementById('lead').addEventListener('submit',async function(e){
   e.preventDefault();
-  if(!this.checkValidity()){this.reportValidity();return}
-  this.style.display='none';document.getElementById('done').style.display='block';
+  var form=this;
+  if(!form.checkValidity()){form.reportValidity();return}
+  var btn=form.querySelector('button[type=submit]');
+  var errEl=document.getElementById('leadErr');
+  var original=btn.textContent;
+  btn.disabled=true; btn.textContent='Sending...'; errEl.textContent='';
+  try{
+    var payload=Object.fromEntries(new FormData(form).entries());
+    payload.elapsed=Date.now()-leadFormStarted;
+    var res=await fetch('/api/lead',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload)
+    });
+    if(!res.ok){throw new Error('Request failed');}
+    form.style.display='none';
+    document.getElementById('done').style.display='block';
+  }catch(err){
+    errEl.textContent='Could not send that. Please call (470) 760-5249 and we will take care of you.';
+    btn.disabled=false; btn.textContent=original;
+  }
 });
 document.getElementById('yr').textContent=new Date().getFullYear();
 
