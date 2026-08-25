@@ -290,7 +290,7 @@ footer .base{display:flex;justify-content:space-between;gap:14px;padding:22px 0;
 .aside-card ul a:hover{background:var(--navy);color:#fff}
 .aside-card ul a.cur{background:var(--navy);color:#fff}
 .pg-faq{margin-top:8px}
-@media(max-width:960px){.pg-grid{grid-template-columns:1fr;gap:40px}.pg-aside{position:static}}
+@media(max-width:960px){.pg-grid{grid-template-columns:1fr;gap:40px}.pg-aside{position:static;max-width:560px}}
 @media(max-width:560px){.pg-main .photo img{height:240px}}
 
 /* =====================================================
