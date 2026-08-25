@@ -65,7 +65,7 @@ nav a:hover{color:var(--navy)}
 /* hero */
 .hero{position:relative;color:#fff;min-height:640px;display:flex;align-items:center;isolation:isolate}
 .hero .bg{position:absolute;inset:0;z-index:-2}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:65% 45%}
 .hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(13,32,49,.92) 0%,rgba(16,42,64,.78) 45%,rgba(16,42,64,.30) 78%,rgba(16,42,64,.12) 100%)}
 .hero .wrap{padding-top:84px;padding-bottom:84px;width:100%}
 .hero .kicker{display:inline-flex;align-items:center;gap:10px;background:rgba(199,161,100,.16);border:1px solid rgba(199,161,100,.55);color:var(--gold);font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:4px;margin-bottom:24px}
