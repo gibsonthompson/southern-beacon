@@ -159,7 +159,7 @@ module.exports = async (req, res) => {
 
   // ---- Build the alert ----
   const lines = [
-    'NEW LEAD - Southern Beacon',
+    'NEW LEAD - Splash Restoration',
     'Name: ' + lead.name,
     'Phone: ' + lead.phone,
   ];
@@ -187,7 +187,7 @@ module.exports = async (req, res) => {
   if (String(process.env.LEAD_AUTOREPLY).toLowerCase() === 'true') {
     await sendTelnyxSMS(
       leadPhoneE164,
-      'Thanks for contacting Southern Beacon Environmental. We received your request and will call you shortly. For anything urgent, call (470) 760-5249. Reply STOP to opt out.'
+      'Thanks for contacting Splash Restoration. We received your request and will call you shortly. For anything urgent, call (470) 760-5249. Reply STOP to opt out.'
     );
   }
 
