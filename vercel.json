@@ -48,23 +48,48 @@
   ],
   "redirects": [
     {
-      "source": "/services/basement-waterproofing",
+      "source": "/services/mold-inspection",
+      "destination": "/services/mold-testing",
+      "permanent": true
+    },
+    {
+      "source": "/services/black-mold-removal",
       "destination": "/services/mold-remediation",
+      "permanent": true
+    },
+    {
+      "source": "/services/attic-mold-removal",
+      "destination": "/services/mold-remediation",
+      "permanent": true
+    },
+    {
+      "source": "/services/clearance-testing",
+      "destination": "/services/mold-testing",
       "permanent": true
     },
     {
       "source": "/services/crawlspace-encapsulation",
-      "destination": "/services/mold-inspection",
+      "destination": "/services/waterproofing",
       "permanent": true
     },
     {
-      "source": "/services/water-damage",
-      "destination": "/services/mold-remediation",
+      "source": "/services/basement-waterproofing",
+      "destination": "/services/waterproofing",
       "permanent": true
     },
     {
-      "source": "/services/clearance-air-testing",
-      "destination": "/services/clearance-testing",
+      "source": "/services/commercial-mold-services",
+      "destination": "/services/water-damage",
+      "permanent": true
+    },
+    {
+      "source": "/learn/what-is-mold",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/learn/types-of-mold",
+      "destination": "/",
       "permanent": true
     }
   ]
