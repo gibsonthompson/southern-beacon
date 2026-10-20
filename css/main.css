@@ -497,3 +497,25 @@ footer .fl i{color:var(--silver-dark)}
 nav a{letter-spacing:.01em;font-size:15.5px}
 .btn{letter-spacing:.02em}
 .head .over,.why .over,.areas .over,.final .over,footer h5,.topbar b,.hdr-phone small,.fld label,.svc .go,.crumb{letter-spacing:.1em}
+/* =====================================================
+   MOBILE hero + logo boost (bigger, less compact)
+   ===================================================== */
+@media(max-width:760px){
+  .wrap{padding:0 16px}
+  /* bigger, roomier hero */
+  .hero .wrap{padding-top:72px;padding-bottom:72px}
+  .hero h1{font-size:43px;line-height:1.04;margin-bottom:18px}
+  .hero p{font-size:18.5px;line-height:1.55;margin-bottom:32px}
+  .hero .ctas{gap:12px;margin-bottom:36px}
+  .hero .ctas .btn{width:100%;padding:18px 22px;font-size:16px}
+  .hero .marks{gap:14px}
+  /* bigger service-page heroes too */
+  .pg-hero .wrap{padding-top:54px;padding-bottom:54px}
+  .pg-hero h1{font-size:36px}
+  .pg-hero p{font-size:17.5px}
+  /* logo as large as the row allows (width-limited by the wide lockup + menu button) */
+  .logo .brand{height:auto;width:min(360px,calc(100vw - 84px))}
+  .burger{padding:8px 9px}
+}
+@media(max-width:430px){.hero h1{font-size:37px}}
+@media(max-width:360px){.hero h1{font-size:31px}}
