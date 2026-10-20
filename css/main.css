@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&display=swap');
 /* =====================================================
    SPLASH RESTORATION · v4 commercial build
    charcoal #16181C / silver #C7CDD3 / steel-blue #2E86C0
@@ -10,7 +10,7 @@
   --silver:#C7CDD3;--silver-dark:#99A0A7;--silver-light:#E6E9EC;
   --bg:#FFFFFF;--bg-gray:#F3F4F6;
   --ink:#16181C;--gray:#555E66;--line:#DCE0E3;
-  --disp:'Playfair Display',serif;--body:'Public Sans',sans-serif;
+  --disp:'Fraunces',serif;--body:'Public Sans',sans-serif;
   --mx:1200px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -490,12 +490,12 @@ footer .fl i{color:var(--silver-dark)}
 @media(max-width:620px){.svcs.four{grid-template-columns:1fr}}
 
 /* =====================================================
-   Playfair Display tuning
+   Fraunces display tuning
    ===================================================== */
-.hero h1,.pg-hero h1{letter-spacing:.005em}
-.head h2,.why h2,.areas h2,.final h2,.svc h3,.stp h3,.aside-card h3,.formbox h3,.pg-main h2,.guarantee .txt b{letter-spacing:.005em}
-nav a{letter-spacing:.02em;font-size:15px}
-.btn{letter-spacing:.03em}
+.hero h1,.pg-hero h1{letter-spacing:0}
+.head h2,.why h2,.areas h2,.final h2,.svc h3,.stp h3,.aside-card h3,.formbox h3,.pg-main h2,.guarantee .txt b{letter-spacing:0}
+nav a{letter-spacing:.01em;font-size:15px}
+.btn{letter-spacing:.02em}
 .head .over,.why .over,.areas .over,.final .over,footer h5,.topbar b,.hdr-phone small,.fld label,.svc .go,.crumb{letter-spacing:.08em}
 /* keep FAQ question sentences in the clean sans */
 .faq summary{font-family:var(--body);font-weight:700;letter-spacing:0}
