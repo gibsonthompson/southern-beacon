@@ -187,7 +187,7 @@ module.exports = async (req, res) => {
   if (String(process.env.LEAD_AUTOREPLY).toLowerCase() === 'true') {
     await sendTelnyxSMS(
       leadPhoneE164,
-      'Thanks for contacting Splash Restoration. We received your request and will call you shortly. For anything urgent, call (470) 760-5249. Reply STOP to opt out.'
+      'Thanks for contacting Splash Restoration. We received your request and will call you shortly. For anything urgent, call (470) 915-0725. Reply STOP to opt out.'
     );
   }
 
